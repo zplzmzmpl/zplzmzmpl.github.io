@@ -39,7 +39,7 @@ var projects = [{
       descr: '',
       img: 'images/08.jpg',
       url: 'https://github.com/zplzmzmpl/semantic_segmentation_based_on_deeplab_v3_using_facade_dataset'
-    }
+    },
     {
       title: '',
       descr: '',
