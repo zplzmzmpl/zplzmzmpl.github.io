@@ -34,6 +34,18 @@ var projects = [{
       img: 'images/07.jpg',
       url: 'https://github.com/zplzmzmpl/object_detection'
     },
+    {
+      title: '',
+      descr: '',
+      img: 'images/08.jpg',
+      url: 'https://github.com/zplzmzmpl/semantic_segmentation_based_on_deeplab_v3_using_facade_dataset'
+    }
+    {
+      title: '',
+      descr: '',
+      img: 'images/09.jpg',
+      url: 'https://github.com/zplzmzmpl/rice_leaf_disease_calssification_based_on_resnet152'
+    }
 
     /*{
     	title: '',
