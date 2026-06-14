@@ -1,0 +1,202 @@
+/* ============================================
+   张世权个人主页 — 样式表
+   修改主题色只需更改 CSS 变量
+   ============================================ */
+
+:root {
+  /* 主题色 — 修改这里即可全局生效 */
+  --color-primary: #2c3e50;
+  --color-accent:  #3498db;
+  --color-bg:      #fafafa;
+  --color-card-bg: #ffffff;
+  --color-text:    #2c3e50;
+  --color-muted:   #7f8c8d;
+  --color-border:  #ecf0f1;
+  --color-tag-bg:  #eaf2f8;
+  --color-tag-text:#2980b9;
+
+  /* 布局 */
+  --max-width:     960px;
+  --card-radius:   8px;
+  --card-shadow:   0 2px 12px rgba(0,0,0,0.08);
+  --card-shadow-hover: 0 6px 24px rgba(0,0,0,0.14);
+  --transition:    0.25s ease;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ---- Header ---- */
+.site-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.site-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+}
+
+.site-header .subtitle {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+.site-header .tagline {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-primary);
+  font-size: 18px;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--color-accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ---- Divider ---- */
+.divider {
+  width: 40px;
+  height: 3px;
+  margin: 0 auto 36px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* ---- Section Title ---- */
+.section-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+}
+
+/* ---- Projects Grid ---- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* ---- Project Card ---- */
+.project-card {
+  background: var(--color-card-bg);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.project-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-4px);
+}
+
+.project-card a {
+  display: block;
+}
+
+.project-card .card-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  transition: opacity var(--transition);
+}
+
+.project-card:hover .card-img {
+  opacity: 0.88;
+}
+
+.project-card .card-body {
+  padding: 14px 16px 16px;
+}
+
+.project-card .card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.4;
+}
+
+.project-card .card-descr {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.project-card .card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.project-card .card-tag {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .site-header { padding: 40px 16px 28px; }
+  .site-header h1 { font-size: 1.8rem; }
+  .projects-grid { gap: 16px; padding: 0 16px 40px; }
+}
