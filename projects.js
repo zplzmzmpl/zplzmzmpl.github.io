@@ -64,5 +64,12 @@ const projects = [
     img: "images/09.jpg",
     url: "https://github.com/zplzmzmpl/rice_leaf_disease_calssification_based_on_resnet152",
     tags: ["分类", "农业遥感"]
+  },
+  {
+    title: "RS-Clips",
+    descr: "Remote sensing image tiling tool — crop large GeoTIFF rasters into training-ready tile datasets",
+    img: "images/10.jpg",
+    url: "https://github.com/zplzmzmpl/rs-clips",
+    tags: ["遥感", "深度学习", "工具"]
   }
 ];
